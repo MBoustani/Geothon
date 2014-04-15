@@ -1,6 +1,16 @@
 Geothon structure
 04/02/2014
 
+vector
+	create a point
+	create a line
+	create a polygon
+	create a polygon with holes
+	get vector information
+Raster
+	create constant raster
+	create raster
+	get raster information
 Conversion Tools
 	Raster to KML
 	Raster to GeoTIFF
