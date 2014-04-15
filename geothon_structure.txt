@@ -1,7 +1,7 @@
 Geothon structure
 04/02/2014
 
-vector
+Vector
 	create a point
 	create a line
 	create a polygon
@@ -14,9 +14,11 @@ Raster
 Conversion Tools
 	Raster to KML
 	Raster to GeoTIFF
+	Raster to Vector
 	Vector to KML
 	Vector to Shapefile
 	Vector to GeoJSON
+ 	Vector to Raster
 Data Management Tools
 	Reprojection
 		Reproject Vector
@@ -29,6 +31,3 @@ Data Management Tools
 		polygon to point
 Spatial Analyst Tools
 	Zonal Statistics
-Other Tools
-	Raster to Vector
-	Vector to Raster
