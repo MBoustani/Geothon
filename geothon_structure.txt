@@ -2,11 +2,16 @@ Geothon structure
 04/02/2014
 
 Vector
-	create a point
-	create a line
-	create a polygon
-	create a polygon with holes
-	get vector information
+	create point
+	create line
+	create polygon
+	create polygon
+	create multipoint
+	create multiline
+	create multipolygon
+	shapefile information
+	geojson information
+	kml information
 Raster
 	create constant raster
 	create raster
