@@ -12,8 +12,8 @@ try:
 except ImportError:
     from osgeo import ogr
 
-latitudes = [50, 51, 52, 53, 54]
-longitudes = [100, 110, 120, 130, 140]
+latitudes = [0, 10, 20, 30, 40]
+longitudes = [0, 40, 50, 60, 40]
 elevation = 0
 
 #Create a linear rign from series of points
