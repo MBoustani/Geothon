@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 
-#Project:       Geothon (https://github.com/MBoustani/Geothon)
-#File:          Vector/create_wkt_point.py
-#Description:   This code create a wkt 3D point from latitude, longitue and elevation.
-#Author:        Maziyar Boustani (github.com/MBoustani)
+'''
+Project:       Geothon (https://github.com/MBoustani/Geothon)
+File:          Vector/create_wkt_point.py
+Description:   This code create a wkt 3D point from latitude, longitue and elevation.
+Author:        Maziyar Boustani (github.com/MBoustani)
+'''
 
 try:
     import ogr
