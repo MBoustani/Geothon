@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 
-#Project:       Geothon (https://github.com/MBoustani/Geothon)
-#File:          Vector/create_wkt_line.py
-#Description:   This code create a wkt line from multi-points.
-#Author:        Maziyar Boustani (github.com/MBoustani)
+'''
+Project:       Geothon (https://github.com/MBoustani/Geothon)
+File:          Vector/create_wkt_line.py
+Description:   This code create a wkt line from multi-points.
+Author:        Maziyar Boustani (github.com/MBoustani)
+'''
 
 try:
     import ogr
