@@ -50,16 +50,16 @@ lines = []
 
 #create first line geometry
 line_1 = ogr.Geometry(ogr.wkbLineString)
-line_1.AddPoint(latitude[0], longitude[0])
-line_1.AddPoint(latitude[1], longitude[1])
-line_1.AddPoint(latitude[2], longitude[2])
+line_1.AddPoint(longitude[0], latitude[0])
+line_1.AddPoint(longitude[1], latitude[1])
+line_1.AddPoint(longitude[2], latitude[2])
 lines.append(line_1)
 
 #create second line geometry
 line_2 = ogr.Geometry(ogr.wkbLineString)
-line_2.AddPoint(latitude[1], longitude[0])
-line_2.AddPoint(latitude[2], longitude[1])
-line_2.AddPoint(latitude[1], longitude[2])
+line_2.AddPoint(longitude[0], latitude[1])
+line_2.AddPoint(longitude[1], latitude[2])
+line_2.AddPoint(longitude[2], latitude[1])
 lines.append(line_2)
 
 for i in range(len(lines)):
