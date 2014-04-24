@@ -47,9 +47,9 @@ layer.CreateField(field_name)
 
 #create line geometry
 line = ogr.Geometry(ogr.wkbLineString)
-line.AddPoint(latitudes[0], longitudes[0])
-line.AddPoint(latitudes[1], longitudes[1])
-line.AddPoint(latitudes[2], longitudes[2])
+line.AddPoint(longitudes[0], latitudes[0])
+line.AddPoint(longitudes[1], latitudes[1])
+line.AddPoint(longitudes[2], latitudes[1])
 
 #create a feature
 feature = ogr.Feature(layer.GetLayerDefn())
