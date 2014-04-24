@@ -20,23 +20,23 @@ points = ogr.Geometry(ogr.wkbMultiPoint)
 
 
 point_1 = ogr.Geometry(ogr.wkbPoint)
-point_1.AddPoint(latitudes[0], longitudes[0], elevation)
+point_1.AddPoint(longitudes[0], latitudes[0], elevation)
 points.AddGeometry(point_1)
 
 point_2 = ogr.Geometry(ogr.wkbPoint)
-point_2.AddPoint(latitudes[1], longitudes[1], elevation)
+point_2.AddPoint(longitudes[1], latitudes[1], elevation)
 points.AddGeometry(point_2)
 
 point_3 = ogr.Geometry(ogr.wkbPoint)
-point_3.AddPoint(latitudes[2], longitudes[2], elevation)
+point_3.AddPoint(longitudes[2], latitudes[2], elevation)
 points.AddGeometry(point_3)
 
 point_4 = ogr.Geometry(ogr.wkbPoint)
-point_4.AddPoint(latitudes[3], longitudes[3], elevation)
+point_4.AddPoint(longitudes[3], latitudes[3], elevation)
 points.AddGeometry(point_4)
 
 point_5 = ogr.Geometry(ogr.wkbPoint)
-point_5.AddPoint(latitudes[4], longitudes[4], elevation)
+point_5.AddPoint(longitudes[4], latitudes[4], elevation)
 points.AddGeometry(point_5)
 
 points.ExportToWkt()
