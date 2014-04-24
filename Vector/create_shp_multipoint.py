@@ -50,7 +50,7 @@ for i in range(len(latitudes)):
     point = ogr.Geometry(ogr.wkbPoint)
 
     #add point to the geometry
-    point.AddPoint(latitudes[i], longitudes[i])
+    point.AddPoint(longitudes[i], latitudes[i])
 
     #create a feature
     feature = ogr.Feature(layer.GetLayerDefn())
