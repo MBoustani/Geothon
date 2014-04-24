@@ -47,10 +47,10 @@ layer.CreateField(field_name)
 
 #create first polygon
 linear_ring_1 = ogr.Geometry(ogr.wkbLinearRing)
-linear_ring_1.AddPoint(latitudes[0], longitudes[0])
-linear_ring_1.AddPoint(latitudes[0], longitudes[1])
-linear_ring_1.AddPoint(latitudes[1], longitudes[1])
-linear_ring_1.AddPoint(latitudes[0], longitudes[0])
+linear_ring_1.AddPoint(longitudes[0], latitudes[0])
+linear_ring_1.AddPoint(longitudes[1], latitudes[0])
+linear_ring_1.AddPoint(longitudes[1], latitudes[1])
+linear_ring_1.AddPoint(longitudes[0], latitudes[0])
 polygon_1 = ogr.Geometry(ogr.wkbPolygon)
 polygon_1.AddGeometry(linear_ring_1)
 
@@ -68,10 +68,10 @@ layer.CreateFeature(feature)
 
 #create second polygon
 linear_ring_2 = ogr.Geometry(ogr.wkbLinearRing)
-linear_ring_2.AddPoint(latitudes[1], longitudes[1])
-linear_ring_2.AddPoint(latitudes[1], longitudes[2])
-linear_ring_2.AddPoint(latitudes[2], longitudes[2])
-linear_ring_2.AddPoint(latitudes[1], longitudes[1])
+linear_ring_2.AddPoint(longitudes[1], latitudes[1])
+linear_ring_2.AddPoint(longitudes[2], latitudes[1])
+linear_ring_2.AddPoint(longitudes[2], latitudes[2])
+linear_ring_2.AddPoint(longitudes[1], latitudes[1])
 polygon_2 = ogr.Geometry(ogr.wkbPolygon)
 polygon_2.AddGeometry(linear_ring_2)
 
