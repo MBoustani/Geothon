@@ -19,7 +19,7 @@ try:
 except ImportError:
     from osgeo import osr
 
-latitudes = [30, 30, 40]
+latitudes = [30, 10, 40]
 longitudes = [10, 20, 30]
 shapefile = 'line.shp'
 layer_name = 'line_layer'
