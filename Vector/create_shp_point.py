@@ -19,8 +19,8 @@ try:
 except ImportError:
     from osgeo import osr
 
-latitude = 30
-longitude = 10
+latitude = 10
+longitude = 30
 shapefile = 'point.shp'
 layer_name = 'point_layer'
 
@@ -47,7 +47,8 @@ layer.CreateField(field_name)
 
 #create point geometry
 point = ogr.Geometry(ogr.wkbPoint)
-point.AddPoint(latitude, longitude)
+#point.AddPoint(latitude, longitude)
+point.AddPoint(longitude, latitude)
 
 #create a feature
 feature = ogr.Feature(layer.GetLayerDefn())
