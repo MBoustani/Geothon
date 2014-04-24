@@ -18,6 +18,6 @@ longitude = 100
 elevation = 0
 
 point = ogr.Geometry(ogr.wkbPoint)
-point.AddPoint(latitude, longitude, elevation)
+point.AddPoint(longitude, latitude, elevation)
 point.ExportToWkt()
 print point
