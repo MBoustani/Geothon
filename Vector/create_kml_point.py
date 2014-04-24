@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 
-#Project:       Geothon (https://github.com/MBoustani/Geothon)
-#File:          Vector/create_kml_point.py
-#Description:   This code creates a point kml from latitude and longitue.
-#Author:        Maziyar Boustani (github.com/MBoustani)
+'''
+Project:       Geothon (https://github.com/MBoustani/Geothon)
+File:          Vector/create_kml_point.py
+Description:   This code creates a point kml from latitude and longitue.
+Author:        Maziyar Boustani (github.com/MBoustani)
+'''
 
 import os
 
