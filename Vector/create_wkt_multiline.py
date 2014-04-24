@@ -21,14 +21,14 @@ multi_lines = ogr.Geometry(ogr.wkbMultiLineString)
 
 #Create first line
 line_1 = ogr.Geometry(ogr.wkbLineString)
-line_1.AddPoint(latitudes[0], longitudes[0], elevation)
-line_1.AddPoint(latitudes[1], longitudes[1], elevation)
+line_1.AddPoint(longitudes[0], latitudes[0], elevation)
+line_1.AddPoint(longitudes[1], latitudes[1], elevation)
 multi_lines.AddGeometry(line_1)
 
 #Create second line
 line_2 = ogr.Geometry(ogr.wkbLineString)
-line_2.AddPoint(latitudes[2], longitudes[2], elevation)
-line_2.AddPoint(latitudes[3], longitudes[3], elevation)
+line_2.AddPoint(longitudes[2], latitudes[2], elevation)
+line_2.AddPoint(longitudes[3], latitudes[3], elevation)
 multi_lines.AddGeometry(line_2)
 
 multi_lines.ExportToWkt()
