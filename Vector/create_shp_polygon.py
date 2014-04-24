@@ -47,13 +47,13 @@ layer.CreateField(field_name)
 
 #create polygon geometry
 linear_ring = ogr.Geometry(ogr.wkbLinearRing)
-linear_ring.AddPoint(latitudes[0], longitudes[0])
-linear_ring.AddPoint(latitudes[1], longitudes[1])
-linear_ring.AddPoint(latitudes[2], longitudes[2])
-linear_ring.AddPoint(latitudes[3], longitudes[3])
-linear_ring.AddPoint(latitudes[4], longitudes[4])
+linear_ring.AddPoint(longitudes[0], latitudes[0])
+linear_ring.AddPoint(longitudes[1], latitudes[1])
+linear_ring.AddPoint(longitudes[2], latitudes[2])
+linear_ring.AddPoint(longitudes[3], latitudes[3])
+linear_ring.AddPoint(longitudes[4], latitudes[4])
 #last point should be first point to close polygon
-linear_ring.AddPoint(latitudes[0], longitudes[0])
+linear_ring.AddPoint(longitudes[0], latitudes[0])
 polygon = ogr.Geometry(ogr.wkbPolygon)
 polygon.AddGeometry(linear_ring)
 
