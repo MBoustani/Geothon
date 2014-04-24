@@ -18,10 +18,10 @@ longitudes = [100, 110, 120, 130, 140]
 elevation = 0
 
 line = ogr.Geometry(ogr.wkbLineString)
-line.AddPoint(latitudes[0], longitudes[0], elevation)
-line.AddPoint(latitudes[1], longitudes[1], elevation)
-line.AddPoint(latitudes[2], longitudes[2], elevation)
-line.AddPoint(latitudes[3], longitudes[3], elevation)
-line.AddPoint(latitudes[4], longitudes[4], elevation)
+line.AddPoint(longitudes[0], latitudes[0], elevation)
+line.AddPoint(longitudes[1], latitudes[1], elevation)
+line.AddPoint(longitudes[2], latitudes[2], elevation)
+line.AddPoint(longitudes[3], latitudes[3], elevation)
+line.AddPoint(longitudes[4], latitudes[4], elevation)
 line.ExportToWkt()
 print line
