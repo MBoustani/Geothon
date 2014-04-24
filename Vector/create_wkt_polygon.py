@@ -18,12 +18,12 @@ elevation = 0
 
 #Create a linear rign from series of points
 linear_ring = ogr.Geometry(ogr.wkbLinearRing)
-linear_ring.AddPoint(latitudes[0], longitudes[0], elevation)
-linear_ring.AddPoint(latitudes[1], longitudes[1], elevation)
-linear_ring.AddPoint(latitudes[2], longitudes[2], elevation)
-linear_ring.AddPoint(latitudes[3], longitudes[3], elevation)
+linear_ring.AddPoint(longitudes[0], latitudes[0], elevation)
+linear_ring.AddPoint(longitudes[1], latitudes[1], elevation)
+linear_ring.AddPoint(longitudes[2], latitudes[2], elevation)
+linear_ring.AddPoint(longitudes[3], latitudes[3], elevation)
 #last point should be same as first point to close the ring
-linear_ring.AddPoint(latitudes[4], longitudes[4], elevation)
+linear_ring.AddPoint(longitudes[4], latitudes[4], elevation)
 linear_ring.ExportToWkt()
 
 #Create the polygon from linear ring
