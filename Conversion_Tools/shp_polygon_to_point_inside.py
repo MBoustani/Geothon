@@ -53,6 +53,7 @@ for layer in range(layer_count):
     max_long = extent[1]
 
     #get range of latitude and logitude of polygon shapefile
+    #in this example, 3 has been choosen for steps
     long_range = np.arange(min_long, max_long, 3)
     lat_range = np.arange(min_lat, max_lat, 3)
 
