@@ -24,7 +24,6 @@ linear_ring.AddPoint(longitudes[2], latitudes[2], elevation)
 linear_ring.AddPoint(longitudes[3], latitudes[3], elevation)
 #last point should be same as first point to close the ring
 linear_ring.AddPoint(longitudes[4], latitudes[4], elevation)
-linear_ring.ExportToWkt()
 
 #Create the polygon from linear ring
 polygon = ogr.Geometry(ogr.wkbPolygon)
