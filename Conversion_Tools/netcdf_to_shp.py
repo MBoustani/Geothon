@@ -2,8 +2,8 @@
 
 '''
 Project:       Geothon (https://github.com/MBoustani/Geothon)
-File:          Vector/create_shp_multipoint.py
-Description:   This code create points shapefile from latitudes and longitues.
+File:          Vector/netcdf_to_shp.py
+Description:   This code converts netCDF file to Shapefile.
 Author:        Maziyar Boustani (github.com/MBoustani)
 '''
 
