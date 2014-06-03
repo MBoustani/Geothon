@@ -13,7 +13,7 @@ except ImportError:
     from osgeo import ogr
 
 #example shapefile file.
-shp_file = '../static_files/Cal_Sacramento_watershed/huc18_250k.shp'
+shp_file = '../static_files/shapefile/populated_places/ne_50m_populated_places.shp'
 
 #set the driver to ESRI Shapefiel
 driver = ogr.GetDriverByName('ESRI Shapefile')
