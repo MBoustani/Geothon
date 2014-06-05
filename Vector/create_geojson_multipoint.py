@@ -21,7 +21,7 @@ multipoint = ogr.Geometry(ogr.wkbMultiPoint)
 #create point geometry and add to multipoint geometry
 for i in range(len(latitudes)):
     point = ogr.Geometry(ogr.wkbPoint)
-    point.AddPoint(latitudes[i], longitudes[i])
+    point.AddPoint(longitudes[i], latitudes[i])
     multipoint.AddGeometry(point)
 
 #convert geometry to GeoJSON format
