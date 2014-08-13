@@ -3,7 +3,7 @@
 '''
 Project:       Geothon (https://github.com/MBoustani/Geothon)
 File:          Vector/create_shp_point.py
-Description:   This code create a point shapefile from latitude and longitue.
+Description:   This code creates a point shapefile from latitude and longitue.
 Author:        Maziyar Boustani (github.com/MBoustani)
 '''
 
@@ -45,9 +45,9 @@ field_name = ogr.FieldDefn("Name", ogr.OFTString)
 field_name.SetWidth(24)
 layer.CreateField(field_name)
 
-#create point geometry
+#define point geometry
 point = ogr.Geometry(ogr.wkbPoint)
-#point.AddPoint(latitude, longitude)
+#add point into point geometry
 point.AddPoint(longitude, latitude)
 
 #create a feature
