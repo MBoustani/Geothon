@@ -18,7 +18,9 @@ longitudes = [0, 40, 50, 60, 40]
 #define polygon geometry
 polygon = ogr.Geometry(ogr.wkbPolygon)
 
+#define linear ring geometry
 linear_ring = ogr.Geometry(ogr.wkbLinearRing)
+#add points to linear ring
 linear_ring.AddPoint(latitudes[0], longitudes[0])
 linear_ring.AddPoint(latitudes[1], longitudes[1])
 linear_ring.AddPoint(latitudes[2], longitudes[2])
