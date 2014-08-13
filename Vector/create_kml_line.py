@@ -45,6 +45,7 @@ layer.CreateField(field_name)
 
 #create line geometry
 line = ogr.Geometry(ogr.wkbLineString)
+#add points into line geometry
 line.AddPoint(longitudes[0], latitudes[0])
 line.AddPoint(longitudes[1], latitudes[1])
 line.AddPoint(longitudes[2], latitudes[2])
