@@ -3,7 +3,7 @@
 '''
 Project:       Geothon (https://github.com/MBoustani/Geothon)
 File:          Vector/create_shp_multiline.py
-Description:   This code create a multiline shapefile from multi lines.
+Description:   This code creates a multiline shapefile from multi-lines.
 Author:        Maziyar Boustani (github.com/MBoustani)
 '''
 
@@ -48,15 +48,17 @@ layer.CreateField(field_name)
 #list of lines geometry
 lines = []
 
-#create first line geometry
+#define first line geometry
 line_1 = ogr.Geometry(ogr.wkbLineString)
+#add points into first line geometry
 line_1.AddPoint(longitude[0], latitude[0])
 line_1.AddPoint(longitude[1], latitude[1])
 line_1.AddPoint(longitude[2], latitude[2])
 lines.append(line_1)
 
-#create second line geometry
+#define second line geometry
 line_2 = ogr.Geometry(ogr.wkbLineString)
+#add points into second line geometry
 line_2.AddPoint(longitude[0], latitude[1])
 line_2.AddPoint(longitude[1], latitude[2])
 line_2.AddPoint(longitude[2], latitude[1])
