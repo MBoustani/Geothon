@@ -3,7 +3,7 @@
 '''
 Project:       Geothon (https://github.com/MBoustani/Geothon)
 File:          Vector/create_shp_multipoint.py
-Description:   This code create points shapefile from latitudes and longitues.
+Description:   This code creates points shapefile from some latitudes and longitues.
 Author:        Maziyar Boustani (github.com/MBoustani)
 '''
 
