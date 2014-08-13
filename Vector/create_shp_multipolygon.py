@@ -3,7 +3,7 @@
 '''
 Project:       Geothon (https://github.com/MBoustani/Geothon)
 File:          Vector/create_shp_multipolygon.py
-Description:   This code create a multi polygon shapefile from some polygons.
+Description:   This code creates a multi polygon shapefile from some polygons.
 Author:        Maziyar Boustani (github.com/MBoustani)
 '''
 
@@ -46,12 +46,16 @@ field_name.SetWidth(24)
 layer.CreateField(field_name)
 
 #create first polygon
+#define first linear ring geometry
 linear_ring_1 = ogr.Geometry(ogr.wkbLinearRing)
+#add points into first linear ring geometry
 linear_ring_1.AddPoint(longitudes[0], latitudes[0])
 linear_ring_1.AddPoint(longitudes[1], latitudes[0])
 linear_ring_1.AddPoint(longitudes[1], latitudes[1])
 linear_ring_1.AddPoint(longitudes[0], latitudes[0])
+#define first polygon geometry
 polygon_1 = ogr.Geometry(ogr.wkbPolygon)
+#add first linear ring into first polygon geometry
 polygon_1.AddGeometry(linear_ring_1)
 
 #create a feature
@@ -63,16 +67,20 @@ feature.SetGeometry(polygon_1)
 #add field "Name" to feature
 feature.SetField("Name", 'polygon_1')
 
-#create feature in layer
+#create first feature in layer
 layer.CreateFeature(feature)
 
 #create second polygon
+#define second linear ring geometry
 linear_ring_2 = ogr.Geometry(ogr.wkbLinearRing)
+#add points into second linear ring geometry
 linear_ring_2.AddPoint(longitudes[1], latitudes[1])
 linear_ring_2.AddPoint(longitudes[2], latitudes[1])
 linear_ring_2.AddPoint(longitudes[2], latitudes[2])
 linear_ring_2.AddPoint(longitudes[1], latitudes[1])
+#define second polygon geometry
 polygon_2 = ogr.Geometry(ogr.wkbPolygon)
+#add second linear ring into second polygon geometry
 polygon_2.AddGeometry(linear_ring_2)
 
 #create a feature
@@ -84,5 +92,5 @@ feature.SetGeometry(polygon_2)
 #add field "Name" to feature
 feature.SetField("Name", 'polygon_2')
 
-#create feature in layer
+#create second feature in layer
 layer.CreateFeature(feature)
