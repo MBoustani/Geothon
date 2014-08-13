@@ -45,6 +45,8 @@ layer.CreateField(field_name)
 
 #create point geometry
 point = ogr.Geometry(ogr.wkbPoint)
+
+#add point into point geometry
 point.AddPoint(longitude, latitude)
 
 #create a feature
