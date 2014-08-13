@@ -3,7 +3,7 @@
 '''
 Project:       Geothon (https://github.com/MBoustani/Geothon)
 File:          Vector/create_shp_polygon.py
-Description:   This code create a polygon shapefile from multi points.
+Description:   This code creates a polygon shapefile from multi-points.
 Author:        Maziyar Boustani (github.com/MBoustani)
 '''
 
@@ -46,7 +46,9 @@ field_name.SetWidth(24)
 layer.CreateField(field_name)
 
 #create polygon geometry
+#define linear ring geometry
 linear_ring = ogr.Geometry(ogr.wkbLinearRing)
+#add points into linear ring geometry
 linear_ring.AddPoint(longitudes[0], latitudes[0])
 linear_ring.AddPoint(longitudes[1], latitudes[1])
 linear_ring.AddPoint(longitudes[2], latitudes[2])
@@ -54,7 +56,9 @@ linear_ring.AddPoint(longitudes[3], latitudes[3])
 linear_ring.AddPoint(longitudes[4], latitudes[4])
 #last point should be first point to close polygon
 linear_ring.AddPoint(longitudes[0], latitudes[0])
+#define polygon geometry
 polygon = ogr.Geometry(ogr.wkbPolygon)
+#add linear ring geometry into polygon geometry
 polygon.AddGeometry(linear_ring)
 
 #create a feature
