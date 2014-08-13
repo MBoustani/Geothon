@@ -3,7 +3,7 @@
 '''
 Project:       Geothon (https://github.com/MBoustani/Geothon)
 File:          Vector/create_geojson_multipolygon.py
-Description:   This code creates a multigeojson polygon file from some points.
+Description:   This code creates a multipolygon geojson file from some points.
 Author:        Maziyar Boustani (github.com/MBoustani)
 '''
 
@@ -18,6 +18,7 @@ longitudes = [10, 40, 60]
 #define multipolygon geometry
 multipolygon = ogr.Geometry(ogr.wkbMultiPolygon)
 
+#create first polygon
 #create first linear ring
 linear_ring_1 = ogr.Geometry(ogr.wkbLinearRing)
 linear_ring_1.AddPoint(longitudes[0], latitudes[0])
@@ -31,6 +32,7 @@ polygon_1.AddGeometry(linear_ring_1)
 #add polygon to multipolygon geometry
 multipolygon.AddGeometry(polygon_1)
 
+#create second polygon
 #create second linear ring
 linear_ring_2 = ogr.Geometry(ogr.wkbLinearRing)
 linear_ring_2.AddPoint(longitudes[1], latitudes[1])
