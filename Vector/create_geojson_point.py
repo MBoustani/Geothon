@@ -17,8 +17,10 @@ longitude = 100
 #to make it 2D point
 elevation = 0
 
+#define point geometry
 point = ogr.Geometry(ogr.wkbPoint)
-#in geojson longitude is first and then latitude
+
+#in geojson longitude is first and latitude after
 point.AddPoint(longitude, latitude)
 geojson_point = point.ExportToJson()
 print geojson_point
