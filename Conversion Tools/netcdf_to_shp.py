@@ -92,8 +92,7 @@ for lat in range(len(latitudes)):
         for time in range(num_time):
             #fill the attribute table with netCDF values for each time
             #putting '0' for 'alt' variable to pick first alt
-            feature.SetField("time_{0}".format(time
-                                               ), str(vals[lon, lat, 0, time]))
+            feature.SetField("time_{0}".format(time), str(vals[lon, lat, 0, time]))
 
         #create feature in layer
         layer.CreateFeature(feature)
