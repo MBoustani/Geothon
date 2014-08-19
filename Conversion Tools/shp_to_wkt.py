@@ -13,7 +13,7 @@ except ImportError:
     from osgeo import ogr
 
 #an example of shapefile file
-shp_file = "../static_files/shapefile/watershed/huc18_250k.shp"
+shp_file = "../static_files/shapefile/rivers_lake_centerlines/ne_50m_rivers_lake_centerlines.shp"
 
 #open the shapefile
 shp_datasource = ogr.Open(shp_file)
