@@ -14,7 +14,7 @@ except ImportError:
     from osgeo import ogr
 
 #an example of shapefile data
-line_shp_file = "../static_files/shapefile/watershed/huc18_250k.shp"
+line_shp_file = "../static_files/shapefile/rivers_lake_centerlines/ne_50m_rivers_lake_centerlines.shp"
 
 #open line shapefile
 line_datasource = ogr.Open(line_shp_file)
@@ -38,6 +38,7 @@ layer_count = line_datasource.GetLayerCount()
 for each_layer in range(layer_count):
     #get one line shapefile
     layer = line_datasource.GetLayerByIndex(each_layer)
+
     #get line shapefile spatial reference
     srs = layer.GetSpatialRef()
 
@@ -51,16 +52,17 @@ for each_layer in range(layer_count):
         line_feature = layer.GetFeature(each_feature)
         #get line feature geometry
         feature_geom = line_feature.GetGeometryRef()
-        #get points data from each line feature
-        points = feature_geom.GetPoints()
-        for point in points:
-            #make point geometry
-            point_geom = ogr.Geometry(ogr.wkbPoint)
-            #add point to point geometry
-            point_geom.AddPoint(point[0], point[1])
-            #define point feature
-            point_feature = ogr.Feature(point_shp_layer.GetLayerDefn())
-            #add point to point feature
-            point_feature.SetGeometry(point_geom)
-            #add point feature to poitn layer
-            point_shp_layer.CreateFeature(point_feature)
+        if feature_geom.GetGeometryName() != 'MULTILINESTRING':
+            #get points data from each line feature
+            points = feature_geom.GetPoints()
+            for point in points:
+                #make point geometry
+                point_geom = ogr.Geometry(ogr.wkbPoint)
+                #add point to point geometry
+                point_geom.AddPoint(point[0], point[1])
+                #define point feature
+                point_feature = ogr.Feature(point_shp_layer.GetLayerDefn())
+                #add point to point feature
+                point_feature.SetGeometry(point_geom)
+                #add point feature to poitn layer
+                point_shp_layer.CreateFeature(point_feature)
