@@ -24,7 +24,7 @@ srs = osr.SpatialReference()
 #in this case wgs84
 srs.ImportFromEPSG(4326)
 
-#an kml example file
+#a kml example file
 kml_file = "../static_files/kml/Google_Campus.kmz"
 
 #set driver to ESRI shapefile to be able to create shapefile
