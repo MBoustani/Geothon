@@ -12,7 +12,7 @@ try:
 except ImportError:
     from osgeo import ogr
 
-#an kml example file
+#a kml example file
 kml_file = "../static_files/kml/Google_Campus.kmz"
 
 #open the kml file
