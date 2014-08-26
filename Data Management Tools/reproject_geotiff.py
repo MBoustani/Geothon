@@ -3,7 +3,7 @@
 '''
 Project:       Geothon (https://github.com/MBoustani/Geothon)
 File:          Raster/geotiff_info.py
-Description:   This code gives geotiff information.
+Description:   This code reprojects GeoTIFF's projection.
 Author:        Maziyar Boustani (github.com/MBoustani)
 '''
 
