@@ -3,7 +3,7 @@
 '''
 Project:       Geothon (https://github.com/MBoustani/Geothon)
 File:          Raster/subset_geotiff.py
-Description:   This code subsets the GeoTIFF with four corner points
+Description:   This code subsets the GeoTIFF with four corner points and exports new GeoTIFF
 Author:        Maziyar Boustani (github.com/MBoustani)
 '''
 
