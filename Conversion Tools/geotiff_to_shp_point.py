@@ -73,8 +73,8 @@ latitudes = np.arange(y_origin, y_end, pixel_y_size)
 data = gtiff_band.ReadAsArray(0, 0, tif_x_size, tif_y_size)
 
 
-shapefile = 'multipoints.shp'
-layer_name = 'multipoint_layer'
+shapefile = 'geotiff_multipoints.shp'
+layer_name = 'geotiff_multipoints_layer'
 
 #create ESRI shapefile dirver
 driver = ogr.GetDriverByName('ESRI Shapefile')
