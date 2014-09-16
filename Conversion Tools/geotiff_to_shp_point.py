@@ -72,8 +72,10 @@ latitudes = np.arange(y_origin, y_end, pixel_y_size)
 #get all pixel value
 data = gtiff_band.ReadAsArray(0, 0, tif_x_size, tif_y_size)
 
-
+#set the shapefile name
 shapefile = 'geotiff_multipoints.shp'
+
+#set the shapefile layer name
 layer_name = 'geotiff_multipoints_layer'
 
 #create ESRI shapefile dirver
