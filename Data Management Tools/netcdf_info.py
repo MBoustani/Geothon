@@ -18,12 +18,17 @@ all_variables = [variable.encode() for variable in nc_file.variables.keys()]
 #list of variables:
 #['time', 'time_bnds', 'lon', 'lon_bnds', 'lat', 'lat_bnds', 'alt', 'H2OMMRLevStd_average']
 
+global_attribute = nc_file.ncattrs()
+for att in global_attribute:
+    print '{0}: {1}'.format(att, nc_file.getncattr(att))
+    
 
 variables = {}
 for value in all_variables:
     variable = nc_file.variables[value]
     variables[value] = []
     
+    variables[value].append({'dimensions': variable.dimensions})
     values_attribute = {}
     for att in variable.ncattrs():
         values_attribute[att] = variable.getncattr(att)
@@ -36,7 +41,6 @@ for value in all_variables:
         variables[value].append(chunk_cache_information)
     except:
         pass
-
 for each in variables:
     print "Variable: {0}".format(each)
     for att in variables[each]:
