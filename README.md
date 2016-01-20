@@ -4,5 +4,4 @@
 Series of GeoSpatial/GIS Python code examples (Python GIS CookBook) using GeoSpatial Open Source libraries
  
  Requirements:
- - GDAL
- - OGR
+ - GDAL and OGR (http://www.gdal.org/)
